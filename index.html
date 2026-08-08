@@ -58,7 +58,6 @@
     position:relative;
   }
 
-  /* Floral corners */
   .floral{
     position:absolute;
     width:220px;
@@ -100,7 +99,6 @@
     position:relative;
   }
 
-  /* Brush stroke banner */
   .brush-banner{
     position:relative;
     display:inline-block;
@@ -173,7 +171,6 @@
   }
   .hero-tagline em{ color:var(--pink-deep); font-style:italic; }
 
-  /* Meta bar */
   .meta-bar{
     display:grid;
     grid-template-columns:repeat(3,1fr);
@@ -196,7 +193,6 @@
   .meta-item .value{ font-size:15px; color:var(--ink); font-weight:600; letter-spacing:0.02em; }
   .meta-item .value.highlight{ color:var(--pink-deep); }
 
-  /* POLAROID ROW */
   .polaroid-row{
     display:grid;
     grid-template-columns:repeat(4,1fr);
@@ -215,10 +211,9 @@
   .polaroid:nth-child(3){ transform:rotate(-1deg); }
   .polaroid:nth-child(4){ transform:rotate(2deg); }
   .polaroid:hover{ transform:rotate(0) scale(1.04); }
-  .polaroid img{
+  .polaroid svg{
     width:100%;
     height:180px;
-    object-fit:cover;
     display:block;
   }
   .polaroid .caption{
@@ -229,7 +224,6 @@
     margin-top:10px;
   }
 
-  /* SECTIONS */
   .section{
     padding:50px 0;
     opacity:0;
@@ -259,7 +253,6 @@
     font-style:italic;
   }
 
-  /* WHAT TO EXPECT ICONS */
   .expect-grid{
     display:grid;
     grid-template-columns:repeat(6,1fr);
@@ -290,7 +283,6 @@
     line-height:1.3;
   }
 
-  /* LETTER */
   .letter-card{
     background:var(--white);
     border:1px solid rgba(212,100,122,0.2);
@@ -326,52 +318,6 @@
     letter-spacing:0.02em;
   }
 
-  /* ALIGNMENT GRID */
-  .align-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:22px;
-    margin-top:36px;
-  }
-  .align-card{
-    background:var(--white);
-    border:1px solid rgba(212,100,122,0.2);
-    border-radius:8px;
-    padding:30px;
-    position:relative;
-    overflow:hidden;
-  }
-  .align-card::before{
-    content:'';
-    position:absolute;
-    top:0; left:0;
-    width:4px;
-    height:100%;
-    background:linear-gradient(180deg, var(--pink-deep), var(--pink-soft));
-  }
-  .align-card .num{
-    font-family:var(--serif);
-    font-size:13px;
-    color:var(--pink-deep);
-    letter-spacing:0.1em;
-    margin-bottom:10px;
-    font-weight:600;
-  }
-  .align-card h4{
-    font-family:var(--serif);
-    font-size:22px;
-    font-weight:700;
-    color:var(--ink);
-    margin-bottom:10px;
-    line-height:1.2;
-  }
-  .align-card p{
-    font-size:14px;
-    line-height:1.7;
-    color:var(--ink-soft);
-  }
-
-  /* BENEFITS */
   .benefits{
     margin-top:36px;
     display:flex;
@@ -408,7 +354,6 @@
   }
   .benefit-row p{ font-size:14.5px; line-height:1.7; color:var(--ink-soft); }
 
-  /* CHANNELS */
   .channels{
     display:flex;
     justify-content:center;
@@ -461,7 +406,6 @@
   .tiktok-btn:hover{ background:var(--olive-deep); transform:translateY(-2px); }
   .tiktok-btn svg{ width:18px; height:18px; fill:#fff; }
 
-  /* CLOSING */
   .closing{
     text-align:center;
     padding-bottom:80px;
@@ -496,26 +440,6 @@
   }
   .contact-line a{ color:var(--ink-soft); }
 
-  .cta-btn{
-    display:inline-flex;
-    align-items:center;
-    gap:10px;
-    background:var(--pink-deep);
-    color:#fff;
-    border:none;
-    font-family:var(--sans);
-    font-weight:600;
-    font-size:14px;
-    padding:18px 36px;
-    border-radius:100px;
-    cursor:pointer;
-    letter-spacing:0.08em;
-    text-transform:uppercase;
-    transition: background 0.3s ease, transform 0.3s ease;
-  }
-  .cta-btn:hover{ background:var(--olive-deep); transform:translateY(-2px); }
-
-  /* FOOTER */
   .footer{
     background:var(--olive);
     color:var(--cream);
@@ -551,7 +475,6 @@
     .meta-item:last-child{ border-bottom:none; }
     .polaroid-row{ grid-template-columns:repeat(2,1fr); }
     .expect-grid{ grid-template-columns:repeat(3,1fr); }
-    .align-grid{ grid-template-columns:1fr; }
     .letter-card{ padding:34px 26px; }
     .footer{ flex-direction:column; text-align:center; }
   }
@@ -559,7 +482,6 @@
 </head>
 <body>
 
-<!-- SVG Filters for brush effect -->
 <svg style="position:absolute;width:0;height:0;">
   <defs>
     <filter id="brush">
@@ -579,22 +501,17 @@
 
 <div class="wrap">
 
-  <!-- HERO -->
   <section class="hero">
-    <!-- Floral corners -->
     <svg class="floral floral-tl" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
       <g opacity="0.95">
-        <!-- Large peony -->
         <circle cx="50" cy="50" r="38" fill="#f4c4c4" opacity="0.7"/>
         <circle cx="50" cy="50" r="28" fill="#e87a8e" opacity="0.6"/>
         <circle cx="50" cy="50" r="18" fill="#d4647a" opacity="0.7"/>
         <circle cx="50" cy="50" r="8" fill="#c2707a"/>
-        <!-- Petals -->
         <ellipse cx="30" cy="30" rx="14" ry="8" fill="#f4c4c4" opacity="0.8" transform="rotate(45 30 30)"/>
         <ellipse cx="70" cy="30" rx="14" ry="8" fill="#f4c4c4" opacity="0.8" transform="rotate(-45 70 30)"/>
         <ellipse cx="30" cy="70" rx="14" ry="8" fill="#f4c4c4" opacity="0.8" transform="rotate(-45 30 70)"/>
         <ellipse cx="70" cy="70" rx="14" ry="8" fill="#f4c4c4" opacity="0.8" transform="rotate(45 70 70)"/>
-        <!-- Cherry blossoms -->
         <g fill="#fce4e4" stroke="#d4647a" stroke-width="0.5">
           <circle cx="120" cy="30" r="5"/>
           <circle cx="140" cy="50" r="4"/>
@@ -602,10 +519,8 @@
           <circle cx="100" cy="60" r="4"/>
           <circle cx="150" cy="80" r="4"/>
         </g>
-        <!-- Leaves -->
         <ellipse cx="90" cy="90" rx="18" ry="6" fill="#565f40" opacity="0.6" transform="rotate(30 90 90)"/>
         <ellipse cx="110" cy="110" rx="16" ry="5" fill="#565f40" opacity="0.5" transform="rotate(-20 110 110)"/>
-        <!-- Small buds -->
         <circle cx="130" cy="100" r="3" fill="#d4647a" opacity="0.7"/>
         <circle cx="170" cy="60" r="3" fill="#d4647a" opacity="0.6"/>
         <circle cx="180" cy="90" r="2.5" fill="#f4c4c4"/>
@@ -688,32 +603,30 @@
       </div>
       <div class="meta-item">
         <div class="label">Prepared For</div>
-        <div class="value highlight">The Coca-Cola Company</div>
+        <div class="value highlight">Shola Milk</div>
       </div>
     </div>
   </section>
 
-  <!-- POLAROID ROW -->
   <div class="polaroid-row">
     <div class="polaroid">
-      <img src="https://image.qwenlm.ai/public_source/ca976ec6-b5af-4b08-baeb-1c226b5d1828/19b8e7f47-0e7a-4d0d-9d5e-3e8f5e5e5e5e.png" alt="Pink drinks" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23fce4e4%22 width=%22200%22 height=%22180%22/><circle cx=%22100%22 cy=%2290%22 r=%2240%22 fill=%22%23d4647a%22 opacity=%220.4%22/><text x=%22100%22 y=%22100%22 font-family=%22serif%22 font-size=%2220%22 fill=%22%23d4647a%22 text-anchor=%22middle%22>Drinks</text></svg>'">
+      <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg"><rect fill="#fce4e4" width="200" height="180"/><circle cx="100" cy="90" r="40" fill="#d4647a" opacity="0.4"/><text x="100" y="100" font-family="serif" font-size="20" fill="#d4647a" text-anchor="middle">Drinks</text></svg>
       <div class="caption">Drinks</div>
     </div>
     <div class="polaroid">
-      <img src="https://image.qwenlm.ai/public_source/ca976ec6-b5af-4b08-baeb-1c226b5d1828/10b1923d8-7219-4137-aae3-46df457a6aac.png" alt="Desserts" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23fdf3ee%22 width=%22200%22 height=%22180%22/><circle cx=%22100%22 cy=%2290%22 r=%2240%22 fill=%22%23f4c4c4%22 opacity=%220.6%22/><text x=%22100%22 y=%22100%22 font-family=%22serif%22 font-size=%2220%22 fill=%22%23d4647a%22 text-anchor=%22middle%22>Desserts</text></svg>'">
+      <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg"><rect fill="#fdf3ee" width="200" height="180"/><circle cx="100" cy="90" r="40" fill="#f4c4c4" opacity="0.6"/><text x="100" y="100" font-family="serif" font-size="20" fill="#d4647a" text-anchor="middle">Desserts</text></svg>
       <div class="caption">Desserts</div>
     </div>
     <div class="polaroid">
-      <img src="https://image.qwenlm.ai/public_source/ca976ec6-b5af-4b08-baeb-1c226b5d1828/18c12f590-061a-44ca-8db2-bf1965236555.png" alt="Mirror painting" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23fce4e4%22 width=%22200%22 height=%22180%22/><rect x=%2260%22 y=%2240%22 width=%2280%22 height=%22100%22 fill=%22%23565f40%22 opacity=%220.3%22 rx=%224%22/><text x=%22100%22 y=%22100%22 font-family=%22serif%22 font-size=%2218%22 fill=%22%23d4647a%22 text-anchor=%22middle%22>Painting</text></svg>'">
+      <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg"><rect fill="#fce4e4" width="200" height="180"/><rect x="60" y="40" width="80" height="100" fill="#565f40" opacity="0.3" rx="4"/><text x="100" y="100" font-family="serif" font-size="18" fill="#d4647a" text-anchor="middle">Painting</text></svg>
       <div class="caption">Mirror Painting</div>
     </div>
     <div class="polaroid">
-      <img src="https://image.qwenlm.ai/public_source/ca976ec6-b5af-4b08-baeb-1c226b5d1828/14bd9760f-46f7-4be1-b90a-6e83bceafc2b.png" alt="Polaroid moments" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 180%22><rect fill=%22%23fdf3ee%22 width=%22200%22 height=%22180%22/><rect x=%2270%22 y=%2250%22 width=%2260%22 height=%2270%22 fill=%22%23d4647a%22 opacity=%220.3%22 rx=%224%22/><circle cx=%22100%22 cy=%2285%22 r=%2215%22 fill=%22%23565f40%22 opacity=%220.4%22/><text x=%22100%22 y=%22150%22 font-family=%22serif%22 font-size=%2216%22 fill=%22%23d4647a%22 text-anchor=%22middle%22>Polaroid</text></svg>'">
+      <svg viewBox="0 0 200 180" xmlns="http://www.w3.org/2000/svg"><rect fill="#fdf3ee" width="200" height="180"/><rect x="70" y="50" width="60" height="70" fill="#d4647a" opacity="0.3" rx="4"/><circle cx="100" cy="85" r="15" fill="#565f40" opacity="0.4"/><text x="100" y="150" font-family="serif" font-size="16" fill="#d4647a" text-anchor="middle">Polaroid</text></svg>
       <div class="caption">Polaroid Moments</div>
     </div>
   </div>
 
-  <!-- WHAT TO EXPECT -->
   <section class="section">
     <h2>What to <em>Expect</em></h2>
     <p class="lede">A thoughtfully curated experience where every detail is designed to delight — from handcrafted sweets to creative activities and meaningful connections.</p>
@@ -724,7 +637,7 @@
           <path d="M8 21h8M12 17v4M7 4h10M5 4l2 13h10l2-13M9 4v5a3 3 0 006 0V4"/>
           <circle cx="12" cy="10" r="1" fill="currentColor"/>
         </svg>
-        <div class="label">Cocktails &<br/>Refreshing Drinks</div>
+        <div class="label">Cocktails &amp;<br/>Refreshing Drinks</div>
       </div>
       <div class="expect-item">
         <svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -766,95 +679,70 @@
           <circle cx="6" cy="18" r="3"/>
           <circle cx="18" cy="16" r="3"/>
         </svg>
-        <div class="label">Good Music &<br/>Good Vibes</div>
+        <div class="label">Good Music &amp;<br/>Good Vibes</div>
       </div>
     </div>
   </section>
 
-  <!-- LETTER -->
   <section class="section">
     <h2>A Note from the <em>Founder</em></h2>
     <div class="letter-card">
-      <p>Dear Coca-Cola Team,</p>
-      <p>My name is Hanan Faris and I am the founder of The Bloom Collective. I am organizing <strong>Summer Social</strong> — a fun, one-day event that brings people together to enjoy desserts, shop from local businesses, and have a good time.</p>
-      <p>It's a day where guests can enjoy different desserts — including sweets I will be preparing myself — alongside other dessert vendors offering a variety of sweet treats. There will also be shopping, photo spots, and a beautiful space for people to spend time with friends.</p>
-      <p>The goal of this event is to support small businesses, bring people together, and create a fun experience that everyone will enjoy. I also want to help local brands reach more customers.</p>
-      <p>Coca-Cola has always stood for togetherness, refreshment, and shared happiness — values that sit at the very heart of what we are creating. I believe this partnership would be a natural and meaningful fit.</p>
+      <p>Dear Shola Milk Team,</p>
+      <p>My name is Hinan Faris and I am the founder of The Bloom Collective. I am organizing <strong>Summer Social</strong> — a fun, one-day event that brings people together to enjoy desserts, shop from local businesses, and have a good time.</p>
+      <p>It's a day where guests can enjoy different desserts — including sweets I will be preparing myself — alongside other dessert vendors offering a variety of sweet treats. There will also be shopping vendors, fun activities, photo spots, and a nice space for people to spend time with friends.</p>
+      <p>The goal of this event is to bring people together, support small businesses, and create a fun experience around desserts and activities. I also want to help local brands reach more customers.</p>
+      <p>I'm looking for a sponsorship partnership with Shola Milk to help make this event successful and create a wonderful experience for our guests.</p>
       <div class="letter-sig">
         <div>
-          <div class="sig-name">Hanan Faris</div>
-          <div class="sig-role">Founder & Organizer · The Bloom Collective</div>
+          <div class="sig-name">Hinan Faris</div>
+          <div class="sig-role">Founder &amp; Organizer · The Bloom Collective</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- WHY COCA-COLA -->
-  <section class="section">
-    <h2>Why <em>Coca-Cola</em></h2>
-    <p class="lede">A partnership between The Bloom Collective and Coca-Cola is a natural alignment of values, audiences, and moments worth sharing.</p>
-
-  </section>
-
-  <!-- SPONSORSHIP -->
   <section class="section">
     <h2>The <em>Partnership</em></h2>
-    <p class="lede">I am looking for a sponsorship partnership to help cover some of the event costs and make The Bloom Collective event the best experience possible for everyone attending. In return, your brand will receive valuable exposure through our event and social media promotions.</p>
+    <p class="lede">I am looking for financial support from Shola Milk to help cover some of the event costs and make Summer Social a better experience for everyone attending. Your support will help us bring the event to life, while giving Shola Milk the chance to connect with our audience and be part of a fun and positive event.</p>
   </section>
 
-  <!-- BENEFITS -->
   <section class="section">
-    <h2>Sponsorship <em>Benefits</em></h2>
+    <h2>Sponsor <em>Benefits</em></h2>
     <div class="benefits">
       <div class="benefit-row">
         <div class="benefit-num">01</div>
         <div>
-          <h4>Brand Visibility</h4>
-          <p>Prominent promotion of the Coca-Cola brand before and throughout the event, on-site and across digital channels.</p>
+          <h4>Brand Promotion</h4>
+          <p>Shola Milk will be promoted before and during the event through our social media content and event promotions.</p>
         </div>
       </div>
       <div class="benefit-row">
         <div class="benefit-num">02</div>
         <div>
           <h4>Logo Placement</h4>
-          <p>Inclusion of the Coca-Cola logo on event posters, printed materials, and social media assets.</p>
+          <p>The Shola Milk logo can be included on selected event materials.</p>
         </div>
       </div>
       <div class="benefit-row">
         <div class="benefit-num">03</div>
         <div>
-          <h4>Product Display & Sampling</h4>
-          <p>A dedicated on-site presence to display product, distribute samples, and engage directly with attendees.</p>
+          <h4>Brand Mentions</h4>
+          <p>The brand can be mentioned during the event, in front of an engaged, in-person audience.</p>
         </div>
       </div>
       <div class="benefit-row">
         <div class="benefit-num">04</div>
         <div>
-          <h4>Social Media Coverage</h4>
-          <p>Feature placement in TikTok and Instagram content, including pre-event teasers and behind-the-scenes coverage.</p>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-num">05</div>
-        <div>
-          <h4>Photo Spot Integration</h4>
-          <p>Opportunity to brand one of our designated photo areas — a high-engagement moment that drives organic sharing.</p>
-        </div>
-      </div>
-      <div class="benefit-row">
-        <div class="benefit-num">06</div>
-        <div>
-          <h4>Direct Community Connection</h4>
-          <p>A face-to-face opportunity to connect with your target audience in a positive, celebratory setting.</p>
+          <h4>Room to Discuss More</h4>
+          <p>We're happy to talk through other ways to give Shola Milk strong visibility around the event.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- CHANNELS -->
   <section class="section">
     <h2>Promotion &amp; <em>Media</em></h2>
-    <p class="lede">The event will be promoted on TikTok and Instagram. We will also post videos, updates, and behind-the-scenes content before the event.</p>
+    <p class="lede">The event will be promoted mainly through TikTok and Instagram. We will share videos, event updates, behind-the-scenes content, and vendor promotions before the event.</p>
 
     <div class="channels">
       <div class="channel-card">
@@ -865,21 +753,22 @@
           Follow on TikTok
         </a>
       </div>
+      <div class="channel-card">
+        <div class="plat">Instagram</div>
+        <div class="handle">@theb_loomcollective</div>
+      </div>
     </div>
   </section>
 
-  <!-- CLOSING -->
   <section class="section closing">
-    <div class="closing-script">Thank You </div>
-    <p class="thanks">Thank you for taking the time to read my proposal. I hope we can work together to make Summer Social a successful and memorable event. I would be happy to discuss this opportunity with you.</p>
-    <div class="signature">Hanan Faris</div>
+    <div class="closing-script">Thank You</div>
+    <p class="thanks">Thank you for taking the time to read my proposal. I would be very happy to have Shola Milk as a sponsor and partner for Summer Social. Thank you for considering this opportunity.</p>
+    <div class="signature">Hinan Faris</div>
     <div class="contact-line">Founder, The Bloom Collective &nbsp;·&nbsp; +251 927 183 618 &nbsp;·&nbsp; <a href="mailto:Hanin27183618@gmail.com">Hanin27183618@gmail.com</a></div>
-    
   </section>
 
 </div>
 
-<!-- FOOTER -->
 <div class="footer">
   <div class="social">
     <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
